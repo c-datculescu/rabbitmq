@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM debian
+FROM debian:latest
 
 # Add files.
 ADD bin/rabbitmq-start /usr/local/bin/
