@@ -18,6 +18,10 @@ RUN \
   DEBIAN_FRONTEND=noninteractive apt-get install -y rabbitmq-server && \
   rm -rf /var/lib/apt/lists/* && \
   rabbitmq-plugins enable rabbitmq_management && \
+  rabbitmq-plugins enable rabbitmq_shovel && \
+  rabbitmq-plugins enable rabbitmq_shovel_management && \
+  rabbitmq-plugins enable rabbitmq_federation && \
+  rabbitmq-plugins enable rabbitmq_federation_management && \
   echo "[{rabbit, [{loopback_users, []}]}]." > /etc/rabbitmq/rabbitmq.config && \
   chmod +x /usr/local/bin/rabbitmq-start
 
