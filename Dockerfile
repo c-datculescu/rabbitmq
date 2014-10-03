@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM debian:wheezy
 
 # Add files.
 ADD bin/rabbitmq-start /usr/local/bin/
